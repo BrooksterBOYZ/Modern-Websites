@@ -17,6 +17,7 @@ header {
     background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient from purple to blue */
     color: #fff;
     padding: 20px 0;
+    text-align: center;
 }
 
 header nav ul {
@@ -24,6 +25,10 @@ header nav ul {
     justify-content: center;
     gap: 30px;
     list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
 }
 
 header nav ul li a {
@@ -36,6 +41,7 @@ header nav ul li a {
     padding: 10px 20px;
     border-radius: 10px;
     border: 1px solid transparent;
+    display: inline-block;
 }
 
 header nav ul li a:hover {
@@ -52,6 +58,20 @@ header nav ul li a:hover {
     padding: 100px 20px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hero div {
+    display: inline-block;
+    background-color: #fff;
+    color: #333;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.hero h1, .hero p {
+    margin: 0;
 }
 
 .hero h1 {
@@ -95,6 +115,8 @@ header nav ul li a:hover {
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    width: 100%;
 }
 
 .price-plan:hover {
@@ -125,6 +147,7 @@ header nav ul li a:hover {
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 100%;
 }
 
 .price-plan button:hover {
@@ -174,7 +197,7 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 40px 20px;
+    padding: 60px 20px; /* Increased padding to stretch footer */
     margin-top: 50px;
     box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.2);
 }
@@ -188,6 +211,7 @@ footer p {
     display: inline-block;
     margin-top: 15px;
     transition: background-color 0.3s;
+    width: auto;
 }
 
 footer p:hover {
@@ -202,6 +226,7 @@ input[type="text"], textarea {
     border: 1px solid #ddd;
     margin-bottom: 20px;
     font-size: 1em;
+    background-color: #fff;
 }
 
 input[type="text"]:focus, textarea:focus {
@@ -218,6 +243,7 @@ button.submit-btn {
     cursor: pointer;
     font-size: 1.2em;
     transition: background-color 0.3s ease;
+    width: 100%;
 }
 
 button.submit-btn:hover {
@@ -353,10 +379,9 @@ button.submit-btn:hover {
     cursor: pointer;
     border: none;
     transition: background-color 0.3s ease;
+    width: 100%;
 }
 
 .payment .submit-btn:hover {
     background-color: #ff6f61;
 }
-
-
