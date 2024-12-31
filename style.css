@@ -33,10 +33,15 @@ header nav ul li a {
     text-transform: uppercase;
     font-weight: bold;
     transition: color 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid transparent;
 }
 
 header nav ul li a:hover {
     color: #ffdb58; /* Light yellow color on hover */
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #ffdb58;
 }
 
 /* Hero Section */
@@ -169,11 +174,24 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 40px 20px;
+    margin-top: 50px;
+    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.2);
 }
 
 footer p {
-    font-size: 1em;
+    font-size: 1.2em;
+    margin: 10px;
+    padding: 12px;
+    background-color: #444;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+footer p:hover {
+    background-color: #ffdb58;
 }
 
 /* Forms */
