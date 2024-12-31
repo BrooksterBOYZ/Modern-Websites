@@ -133,6 +133,7 @@ header nav ul li a:hover {
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin: 50px 0;
 }
 
 .testimonials h2 {
@@ -170,6 +171,7 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
+    margin-top: 50px;
 }
 
 footer p {
@@ -340,3 +342,4 @@ button.submit-btn:hover {
 .payment .submit-btn:hover {
     background-color: #ff6f61;
 }
+
