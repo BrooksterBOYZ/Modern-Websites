@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Website - Home</title>
     <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>
 
+    <!-- Header Section -->
     <header>
         <nav>
             <ul>
@@ -22,38 +24,68 @@
         </nav>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
-        <h1>Welcome to Modern Website</h1>
-        <p>We build sleek and modern online stores for businesses.</p>
-        <button>Get a Quote</button>
+        <div class="hero-content">
+            <h1>Welcome to Modern Website</h1>
+            <p>We build sleek and modern online stores for businesses.</p>
+            <button class="cta-btn">Get a Quote</button>
+        </div>
     </section>
 
+    <!-- Features Section -->
     <section class="features">
         <h2>Our Features</h2>
-        <div class="feature-box">
-            <h3>E-commerce Solutions</h3>
-            <p>Powerful online store platforms with advanced features.</p>
-        </div>
-        <div class="feature-box">
-            <h3>Custom Design</h3>
-            <p>Unique and visually appealing designs tailored to your brand.</p>
-        </div>
-        <div class="feature-box">
-            <h3>Mobile-Friendly</h3>
-            <p>Seamless experience across all devices (desktop, mobile, tablet).</p>
-        </div>
-        <div class="feature-box">
-            <h3>SEO Optimization</h3>
-            <p>Improved search engine ranking for increased visibility.</p>
+        <div class="feature-container">
+            <div class="feature-box">
+                <i class="fas fa-store-alt"></i>
+                <h3>E-commerce Solutions</h3>
+                <p>Powerful online store platforms with advanced features.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-paint-brush"></i>
+                <h3>Custom Design</h3>
+                <p>Unique and visually appealing designs tailored to your brand.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Mobile-Friendly</h3>
+                <p>Seamless experience across all devices (desktop, mobile, tablet).</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-search"></i>
+                <h3>SEO Optimization</h3>
+                <p>Improved search engine ranking for increased visibility.</p>
+            </div>
         </div>
     </section>
 
+    <!-- Footer Section -->
     <footer>
         <p>&copy; 2023 Modern Website. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
     </footer>
 
+    <!-- Live Chat Button -->
     <div id="livechat">
-        </div>
+        💬
+    </div>
+
+    <!-- JS for interactions (optional) -->
+    <script>
+        // Example of making the Get a Quote button interactive
+        document.querySelector('.cta-btn').addEventListener('mouseover', function() {
+            this.style.backgroundColor = '#007bff';
+        });
+        document.querySelector('.cta-btn').addEventListener('mouseout', function() {
+            this.style.backgroundColor = '#0099ff';
+        });
+    </script>
 
 </body>
 </html>
+
