@@ -1,14 +1,14 @@
+/* Global Styles */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    line-height: 1.6;
 }
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
     box-sizing: border-box; 
 }
 
@@ -19,130 +19,198 @@ body {
 }
 
 .section {
-    padding: 50px 0;
+    padding: 60px 0;
 }
 
 .rounded-box {
-    border-radius: 15px; /* Slightly larger radius */
-    padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Increased shadow */
+    border-radius: 20px; /* Larger radius for a more modern look */
+    padding: 35px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More prominent shadow */
     background-color: #fff;
 }
 
+/* Header Section */
 header {
     background-color: #333;
     color: #fff;
-    text-align: center; 
-    .rounded-box; 
+    text-align: center;
+    padding: 40px 0;
 }
 
+header .rounded-box {
+    padding: 30px; /* Add padding to the header rounded box */
+}
+
+/* Navigation */
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
+    font-size: 1.1rem;
 }
 
 nav li {
-    margin: 0 25px; /* Increased spacing between nav items */
+    margin: 0 20px;
 }
 
 nav a {
     text-decoration: none;
     color: #fff;
-    font-weight: bold;
-    transition: color 0.3s ease; 
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
     color: #0099ff; /* Brighter blue hover color */
 }
 
+/* Hero Section */
 .hero {
     text-align: center;
-    .rounded-box; 
+    padding: 60px 20px;
 }
 
 .hero h1 {
-    font-size: 2.8rem; /* Increased heading size */
+    font-size: 3rem; /* Larger font for impact */
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .hero p {
-    font-size: 1.1rem; 
-    max-width: 600px; 
+    font-size: 1.2rem; /* Increased font size for better readability */
+    max-width: 700px;
     margin: 0 auto; /* Centered paragraph */
+    color: #555;
 }
 
+/* Features Section */
 .features {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    .section; 
+    gap: 40px; /* Spacing between items */
 }
 
 .feature-box {
-    width: 320px; /* Slightly wider boxes */
-    margin: 25px; 
+    width: 320px;
     text-align: center;
-    .rounded-box; 
+    padding: 30px;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .feature-box h3 {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
 }
 
+/* Testimonials Section */
 .testimonials {
-    .section; 
+    padding: 60px 0;
+    background-color: #f8f8f8;
 }
 
 .testimonial {
-    margin: 25px; 
-    padding: 30px; 
-    .rounded-box; 
+    margin: 25px 0;
+    padding: 30px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+.testimonial p {
+    font-style: italic;
+    color: #666;
+}
+
+/* Pricing Section */
 .pricing {
     display: flex;
     justify-content: space-around;
-    .section; 
+    gap: 30px;
 }
 
 .price-plan {
-    padding: 30px;
+    padding: 35px;
     text-align: center;
-    .rounded-box; 
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+.price-plan h3 {
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+}
+
+/* Footer Section */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 25px 0; 
-    .rounded-box; 
+    padding: 30px 0;
 }
 
+footer .rounded-box {
+    padding: 20px;
+}
+
+/* Live Chat Button */
 #livechat {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background-color: #007bff;
     color: #fff;
-    padding: 12px 18px; 
-    border-radius: 5px;
+    padding: 15px 20px;
+    border-radius: 30px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 #livechat:hover {
-    background-color: #0062cc; 
+    background-color: #0062cc;
+    transform: scale(1.05);
 }
 
-/* Responsive Design (very basic) */
-@media (max-width: 768px) { 
+/* Responsive Design */
+@media (max-width: 1024px) {
+    nav ul {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
     .features, .pricing {
         flex-direction: column;
         align-items: center;
+    }
+
+    .feature-box, .price-plan {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    nav li {
+        margin: 0 15px;
+    }
+
+    .feature-box, .price-plan {
+        width: 100%;
     }
 }
