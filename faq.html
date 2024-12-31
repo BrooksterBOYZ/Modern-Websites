@@ -24,15 +24,51 @@
 
     <section class="faq">
         <h2>Frequently Asked Questions</h2>
-        <div class="box">
-            <p>Check out the most common questions our customers ask. If you don’t find what you’re looking for, feel free to contact us.</p>
-            <a href="faq-list.html" class="cta-btn">View FAQ</a>
+        <p>Here are some of the most common questions our customers ask. If you don't find what you're looking for, feel free to <a href="contact.html">contact us</a>.</p>
+
+        <div class="accordion-item">
+            <div class="accordion-header">What services do you offer?</div>
+            <div class="accordion-content">
+                <p>We offer a range of services including web design, development, SEO, and digital marketing to help your business grow.</p>
+            </div>
         </div>
+        <div class="accordion-item">
+            <div class="accordion-header">How can I contact you?</div>
+            <div class="accordion-content">
+                <p>You can contact us via the contact form on our website or email us directly at support@modernwebsite.com.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">What is your pricing structure?</div>
+            <div class="accordion-content">
+                <p>Our pricing is flexible depending on the services you need. Contact us for a personalized quote.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">Do you provide customer support?</div>
+            <div class="accordion-content">
+                <p>Yes, we offer 24/7 customer support via email and phone. You can reach us anytime with your queries.</p>
+            </div>
+        </div>
+
+        <p>Still have questions? <a href="contact.html" class="cta-btn">Contact us</a></p>
     </section>
 
     <footer>
         <p>&copy; 2025 Modern Website. All rights reserved.</p>
     </footer>
 
+    <script>
+        // Accordion functionality
+        document.querySelectorAll('.accordion-header').forEach(item => {
+            item.addEventListener('click', () => {
+                const content = item.nextElementSibling;
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+
 </body>
 </html>
+
