@@ -1,15 +1,15 @@
 body {
-    font-family: 'Poppins', sans-serif; /* Using a modern font */
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Light gray background */
+    background-color: #f4f4f4;
     color: #333;
 }
 
-/* Global styles for headings */
-h1, h2, h3 {
-    color: #333;
-    margin-bottom: 20px;
+*,
+*::before,
+*::after {
+    box-sizing: border-box; 
 }
 
 .container {
@@ -18,17 +18,18 @@ h1, h2, h3 {
     padding: 20px;
 }
 
-.curved-box {
+.rounded-box {
     border-radius: 10px; 
     padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    background-color: #fff; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    background-color: #fff;
 }
 
 header {
-    background-color: #333; /* Dark header background */
+    background-color: #333;
     color: #fff;
     padding: 15px 0;
+    .rounded-box; /* Apply rounded box to header */
 }
 
 nav ul {
@@ -51,14 +52,13 @@ nav a {
 }
 
 nav a:hover {
-    color: #007bff; /* Blue hover color */
+    color: #007bff;
 }
 
 .hero {
     text-align: center;
     padding: 50px 0;
-    background-color: #fff; 
-    .curved-box; 
+    .rounded-box; /* Apply rounded box to hero section */
 }
 
 .features {
@@ -72,7 +72,7 @@ nav a:hover {
     width: 300px;
     margin: 20px;
     text-align: center;
-    .curved-box; 
+    .rounded-box; 
 }
 
 .testimonials {
@@ -82,7 +82,7 @@ nav a:hover {
 .testimonial {
     margin: 20px;
     padding: 20px;
-    .curved-box; 
+    .rounded-box; 
 }
 
 .pricing {
@@ -94,7 +94,7 @@ nav a:hover {
 .price-plan {
     padding: 20px;
     text-align: center;
-    .curved-box; 
+    .rounded-box; 
 }
 
 footer {
@@ -102,13 +102,14 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
+    .rounded-box; /* Apply rounded box to footer */
 }
 
 #livechat {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #007bff; /* Blue background for chat button */
+    background-color: #007bff;
     color: #fff;
     padding: 10px 15px;
     border-radius: 5px;
@@ -117,7 +118,7 @@ footer {
 }
 
 #livechat:hover {
-    background-color: #0062cc; /* Darker blue on hover */
+    background-color: #0062cc; 
 }
 
 /* Responsive Design (very basic) */
