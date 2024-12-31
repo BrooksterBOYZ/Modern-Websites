@@ -1,0 +1,129 @@
+body {
+    font-family: 'Poppins', sans-serif; /* Using a modern font */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333;
+}
+
+/* Global styles for headings */
+h1, h2, h3 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.curved-box {
+    border-radius: 10px; 
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff; 
+}
+
+header {
+    background-color: #333; /* Dark header background */
+    color: #fff;
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease; 
+}
+
+nav a:hover {
+    color: #007bff; /* Blue hover color */
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #fff; 
+    .curved-box; 
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px 0;
+}
+
+.feature-box {
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+    .curved-box; 
+}
+
+.testimonials {
+    padding: 50px 0;
+}
+
+.testimonial {
+    margin: 20px;
+    padding: 20px;
+    .curved-box; 
+}
+
+.pricing {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+}
+
+.price-plan {
+    padding: 20px;
+    text-align: center;
+    .curved-box; 
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#livechat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff; /* Blue background for chat button */
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#livechat:hover {
+    background-color: #0062cc; /* Darker blue on hover */
+}
+
+/* Responsive Design (very basic) */
+@media (max-width: 768px) { 
+    .features, .pricing {
+        flex-direction: column;
+        align-items: center;
+    }
+}
