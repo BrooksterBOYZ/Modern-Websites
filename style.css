@@ -1,209 +1,255 @@
-/* General Section Styles */
-section {
-    padding: 50px 20px;
-    margin: 50px 0;
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-section h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
     color: #333;
-    text-align: center;
-}
-
-section p {
-    font-size: 1.2em;
     line-height: 1.6;
-    color: #555;
+}
+
+/* Header Section */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+header nav ul {
+    list-style: none;
     text-align: center;
 }
 
-/* About Section */
-.about {
-    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Purple to blue gradient */
-    color: white;
-    padding: 80px 20px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.about h2 {
-    font-size: 3em;
-    margin-bottom: 20px;
-}
-
-.about p {
-    font-size: 1.4em;
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-.about .cta-button {
-    background-color: #ffdb58;
-    color: white;
-    padding: 15px 40px;
-    border-radius: 30px;
-    font-size: 1.4em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.about .cta-button:hover {
-    background-color: #ff6f61;
-}
-
-/* Contact Section */
-.contact {
-    background-color: #f9f9f9;
-    color: #333;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.contact h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
-    color: #333;
-    text-align: center;
-}
-
-.contact p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-.contact .form-group {
-    margin-bottom: 20px;
-}
-
-.contact input[type="text"], 
-.contact textarea {
-    width: 100%;
-    padding: 15px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-.contact input[type="text"]:focus, 
-.contact textarea:focus {
-    border-color: #f47c4e;
-    outline: none;
-}
-
-.contact button.submit-btn {
-    background-color: #f47c4e;
-    color: white;
-    padding: 15px 40px;
-    font-size: 1.4em;
-    border-radius: 30px;
-    cursor: pointer;
-    border: none;
-    transition: background-color 0.3s ease;
-    display: block;
-    margin: 0 auto;
-}
-
-.contact button.submit-btn:hover {
-    background-color: #ff6f61;
-}
-
-/* FAQ Section */
-.faq {
-    background: linear-gradient(135deg, #ff6f61, #ffab00); /* Gradient from pink to yellow */
-    color: white;
-    padding: 80px 20px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.faq h2 {
-    font-size: 3em;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.faq .faq-item {
-    margin-bottom: 20px;
-}
-
-.faq .faq-item h3 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-    color: white;
-}
-
-.faq .faq-item p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    color: #f9f9f9;
-}
-
-/* Services Section */
-.services {
-    background: linear-gradient(135deg, #f47c4e, #ff6f61); /* Gradient from coral to red */
-    color: white;
-    padding: 80px 20px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.services h2 {
-    font-size: 3em;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.services .service-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-    background-color: #f9f9f9;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-}
-
-.services .service-item img {
-    width: 100px;
-    height: 100px;
-    margin-right: 20px;
-}
-
-.services .service-item h3 {
-    font-size: 2em;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.services .service-item p {
-    font-size: 1.2em;
-    color: #555;
-}
-
-/* Button Styles */
-button.submit-btn {
-    background-color: #ffdb58;
-    color: white;
-    padding: 15px 40px;
-    border-radius: 30px;
-    font-size: 1.4em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+header nav ul li {
     display: inline-block;
-    margin-top: 20px;
+    margin: 0 15px;
 }
 
-button.submit-btn:hover {
-    background-color: #ff6f61;
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Hero Section */
+.hero {
+    background: #2c3e50;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    background-color: #f39c12;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.cta-btn:hover {
+    background-color: #e67e22;
+}
+
+/* Features Section */
+.features {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.features h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.feature-box {
+    background-color: white;
+    padding: 30px;
+    width: 23%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.feature-box i {
+    font-size: 40px;
+    color: #f39c12;
+    margin-bottom: 20px;
+}
+
+.feature-box h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.feature-box p {
+    font-size: 16px;
+    color: #777;
+}
+
+.feature-box:hover {
+    transform: scale(1.05);
+}
+
+/* Pricing Section */
+.pricing {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 40px;
+    text-align: center;
+}
+
+.pricing h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.pricing p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #777;
+}
+
+.price-plan {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    transition: transform 0.3s ease-in-out;
+}
+
+.price-plan:hover {
+    transform: scale(1.05);
+}
+
+.price-plan h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.price-plan ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.price-plan ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.price-plan .price {
+    font-size: 32px;
+    font-weight: bold;
+    color: #f39c12;
+    margin: 20px 0;
+}
+
+.price-plan button {
+    background-color: #f39c12;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.price-plan button:hover {
+    background-color: #e67e22;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #ecf0f1;
+}
+
+.testimonials h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.testimonial-box {
+    background-color: white;
+    padding: 30px;
+    width: 30%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-style: italic;
+    color: #777;
+}
+
+.testimonial-quote {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.testimonial-author {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.testimonial-author strong {
+    color: #f39c12;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
 }
