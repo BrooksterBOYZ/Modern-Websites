@@ -1,84 +1,52 @@
-/* General Styles */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
 }
 
 body {
-    background-color: #f4f7fc;
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #f7f7f7;
     color: #333;
     line-height: 1.6;
 }
 
-/* Container Wrapper */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Box for Everything */
-.box {
-    background-color: white;
-    border-radius: 20px;
-    padding: 20px;
-    margin: 20px 0;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-}
-
 /* Header */
 header {
-    background-color: #333;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient from purple to blue */
+    color: #fff;
     padding: 20px 0;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-    margin-bottom: 20px;
 }
 
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav ul {
+header nav ul {
     display: flex;
     justify-content: center;
     gap: 30px;
+    list-style-type: none;
 }
 
-nav ul li {
-    list-style: none;
-}
-
-nav ul li a {
+header nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
-    font-weight: bold;
     text-transform: uppercase;
-    transition: color 0.3s;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #f47c4e;  /* Accent color on hover */
+header nav ul li a:hover {
+    color: #ffdb58; /* Light yellow color on hover */
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(45deg, #ff6f61, #ffab00);
+    background: linear-gradient(45deg, #ff6f61, #ffab00); /* Gradient from pink to yellow */
     color: white;
     text-align: center;
     padding: 100px 20px;
-    border-radius: 20px;
-    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-}
-
-.hero .box {
-    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .hero h1 {
@@ -92,95 +60,51 @@ nav ul li a:hover {
 }
 
 .hero button {
-    background-color: #f47c4e;
+    background-color: #ffdb58;
     color: white;
     border: none;
     padding: 12px 30px;
     border-radius: 30px;
     font-size: 1.2em;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .hero button:hover {
     background-color: #ff6f61;
 }
 
-/* Features Section */
-.features {
+/* Pricing Section */
+.pricing {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 50px 20px;
-}
-
-.feature-box .box {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.feature-box .box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.15);
-}
-
-.feature-box h3 {
-    font-size: 2em;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.feature-box p {
-    font-size: 1.2em;
-    color: #555;
-}
-
-/* Pricing Section */
-.pricing {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 50px 20px;
     text-align: center;
 }
 
-.price-plan .box {
-    background-color: white;
+.price-plan {
+    background: linear-gradient(45deg, #f47c4e, #ff6f61); /* Gradient from coral to red */
+    color: white;
     padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.price-plan .box:hover {
+.price-plan:hover {
     transform: translateY(-10px);
-    box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
 }
 
 .price-plan h3 {
-    font-size: 2em;
-    color: #333;
+    font-size: 2.5em;
     margin-bottom: 20px;
-    padding: 10px 20px;
-    background-color: #f4f7fc;
-    border-radius: 10px;
-    width: 100%;
-    text-align: center;
 }
 
 .price-plan ul {
-    list-style: none;
+    list-style-type: none;
     margin-bottom: 20px;
-    text-align: left;
-    padding: 0 20px;
 }
 
 .price-plan ul li {
@@ -189,68 +113,77 @@ nav ul li a:hover {
 }
 
 .price-plan button {
-    background-color: #f47c4e;
+    background-color: #ffdb58;
     color: white;
     border: none;
     padding: 12px 30px;
     border-radius: 30px;
     cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
 .price-plan button:hover {
     background-color: #ff6f61;
 }
 
-/* FAQ Section */
-.faq-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+/* Testimonials Section */
+.testimonials {
+    background-color: #fff;
     padding: 50px 20px;
-}
-
-.faq-box .box {
-    background-color: white;
-    padding: 30px;
     border-radius: 20px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.faq-box .box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.15);
-}
-
-.faq-box h3 {
-    font-size: 2em;
-    margin-bottom: 15px;
+.testimonials h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
     color: #333;
 }
 
-.faq-box p {
-    font-size: 1.1em;
+.testimonial {
+    background-color: #f9f9f9;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+    font-size: 1.2em;
     color: #555;
 }
 
-/* Forms */
-.input-box, .textarea-box {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+.testimonial p:first-child {
+    font-style: italic;
 }
 
+.testimonial p:last-child {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #f47c4e;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+/* Forms */
 input[type="text"], textarea {
     width: 100%;
-    padding: 15px;
+    padding: 12px;
     border-radius: 10px;
     border: 1px solid #ddd;
-    font-size: 1.2em;
-    transition: border-color 0.3s;
+    margin-bottom: 20px;
+    font-size: 1em;
 }
 
 input[type="text"]:focus, textarea:focus {
@@ -258,15 +191,7 @@ input[type="text"]:focus, textarea:focus {
     outline: none;
 }
 
-/* Contact Form */
-.contact-form .box {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form button.submit-btn {
+button.submit-btn {
     background-color: #f47c4e;
     color: white;
     border: none;
@@ -274,46 +199,144 @@ input[type="text"]:focus, textarea:focus {
     border-radius: 30px;
     cursor: pointer;
     font-size: 1.2em;
-    transition: background-color 0.3s;
-    margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
-.contact-form button.submit-btn:hover {
+button.submit-btn:hover {
     background-color: #ff6f61;
 }
 
-/* Footer */
-footer .box {
+/* Live Chat Box */
+.livechat-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient for the chat bubble */
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.livechat-toggle img {
+    width: 30px;
+    height: 30px;
+}
+
+.livechat-box {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background: linear-gradient(45deg, #ff6f61, #ffab00); /* Gradient chat box */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.livechat-box.active {
+    display: block;
+}
+
+.chat-header {
     background-color: #333;
     color: white;
+    padding: 15px;
     text-align: center;
-    padding: 30px 20px;
-    box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.1);
-    margin-top: 40px;
     font-size: 1.2em;
-    border-top: 5px solid #f47c4e;
+    border-radius: 15px 15px 0 0;
 }
 
-footer p {
+.chat-body {
+    padding: 20px;
     font-size: 1em;
+    height: 230px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 20px;
-    }
+.chat-footer {
+    padding: 10px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
 
-    .pricing {
-        grid-template-columns: 1fr;
-    }
+.chat-footer textarea {
+    width: 80%;
+    height: 40px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
 
-    .faq-section {
-        grid-template-columns: 1fr;
-    }
+.chat-footer button {
+    width: 15%;
+    background-color: #f47c4e;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-    .features {
-        grid-template-columns: 1fr;
-    }
+.chat-footer button:hover {
+    background-color: #ff6f61;
+}
+
+/* Payment Page Styles */
+.payment {
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #ff6f61, #ffab00); /* Gradient from pink to yellow */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.payment h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+}
+
+.payment form {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment .form-group {
+    margin-bottom: 20px;
+}
+
+.payment label {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.payment input[type="text"] {
+    padding: 15px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.payment .submit-btn {
+    padding: 15px 30px;
+    background-color: #f47c4e;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.payment .submit-btn:hover {
+    background-color: #ff6f61;
 }
