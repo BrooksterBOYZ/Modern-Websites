@@ -1,301 +1,123 @@
-/* General Reset and Basic Styling */
-* {
+/* General Page Styles */
+body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f9f9f9;
+    background-color: #f4f4f4;
     color: #333;
-    line-height: 1.6;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Header and Navigation */
+/* Header */
 header {
     background-color: #333;
-    padding: 20px 0;
-    color: white;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
 }
 
 header nav ul {
-    list-style: none;
     display: flex;
     justify-content: center;
+    list-style-type: none;
     padding: 0;
-    margin: 0;
 }
 
-header nav li {
+header nav ul li {
     margin: 0 15px;
 }
 
-header nav a {
+header nav ul li a {
     color: white;
+    text-decoration: none;
     font-weight: bold;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
 }
 
-header nav a:hover {
-    color: #0099ff;
+/* Contact Page */
+.contact {
+    padding: 50px;
+    text-align: center;
 }
 
-/* Hero Section */
-.hero {
+.contact-form-container {
+    max-width: 600px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+button.submit-btn {
+    padding: 12px;
     background-color: #333;
     color: white;
-    text-align: center;
-    padding: 80px 20px;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-.hero button {
-    background-color: #0099ff;
-    color: white;
-    font-size: 1.1rem;
-    padding: 12px 24px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-.hero button:hover {
-    background-color: #007acc;
-}
-
-/* Features Section */
-.features {
-    background-color: white;
-    padding: 50px 20px;
+/* Services Page */
+.services {
+    padding: 50px;
     text-align: center;
 }
 
-.features h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #333;
-}
-
-.feature-box {
-    background-color: #f9f9f9;
-    padding: 30px;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.feature-box:hover {
-    transform: translateY(-10px);
-}
-
-.feature-box h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: #007bff;
-}
-
-.feature-box p {
-    font-size: 1.1rem;
-    color: #555;
-}
-
-/* Testimonials Section */
-.testimonials {
+.service-card {
     background-color: #fff;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.testimonials h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-}
-
-.testimonial-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.testimonial-box {
-    background-color: #f9f9f9;
+    margin: 20px 0;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-    transition: transform 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.testimonial-box:hover {
-    transform: translateY(-10px);
-}
-
-.testimonial-quote {
-    font-size: 1.1rem;
-    font-style: italic;
-    margin-bottom: 20px;
-    color: #555;
-}
-
-.testimonial-author {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #333;
-}
-
-.testimonial-author strong {
-    color: #007bff;
-}
-
-/* Pricing Section */
-.pricing {
-    background-color: white;
-    padding: 50px 20px;
+/* FAQ Page */
+.faq {
+    padding: 50px;
     text-align: center;
 }
 
-.pricing h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #333;
-}
-
-.price-plan {
-    background-color: #f9f9f9;
-    padding: 30px;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    display: inline-block;
-    vertical-align: top;
-    transition: transform 0.3s ease;
-}
-
-.price-plan:hover {
-    transform: translateY(-10px);
-}
-
-.price-plan h3 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #007bff;
-}
-
-.price-plan ul {
-    list-style: none;
-    padding: 0;
+.faq-item {
     margin-bottom: 20px;
 }
 
-.price-plan li {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-.price-plan button {
-    background-color: #0099ff;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 5px;
+.faq-item h3 {
     cursor: pointer;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    background-color: #eee;
+    padding: 15px;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-.price-plan button:hover {
-    background-color: #007acc;
+.faq-item h3:hover {
+    background-color: #ddd;
 }
 
-/* Footer Section */
+.faq-item .answer {
+    display: none;
+    padding: 15px;
+    background-color: #fafafa;
+    border-radius: 5px;
+}
+
+/* Footer */
 footer {
     background-color: #333;
     color: white;
-    padding: 20px;
     text-align: center;
-}
-
-footer p {
-    font-size: 1rem;
-}
-
-footer .social-links a {
-    color: white;
-    font-size: 1.5rem;
-    margin: 0 10px;
-    transition: color 0.3s;
-}
-
-footer .social-links a:hover {
-    color: #0099ff;
-}
-
-/* Live Chat */
-#livechat {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #007bff;
-    color: white;
-    padding: 12px 18px;
-    border-radius: 50%;
-    font-size: 24px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#livechat:hover {
-    background-color: #0056b3;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
-    }
-
-    .feature-box, .testimonial-box, .price-plan {
-        width: 90%;
-        margin: 10px 0;
-    }
-
-    .testimonials, .features, .pricing {
-        padding: 40px 20px;
-    }
-
-    .hero {
-        padding: 50px 20px;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
+    padding: 10px;
 }
