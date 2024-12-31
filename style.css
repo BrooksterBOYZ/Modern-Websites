@@ -60,7 +60,6 @@ header nav ul li a:hover {
     margin-bottom: 30px;
 }
 
-/* CTA Button Styling */
 .cta-btn {
     background-color: #f39c12;
     color: white;
@@ -265,6 +264,7 @@ footer {
 .contact h1 {
     font-size: 36px;
     margin-bottom: 20px;
+    color: #333;
 }
 
 .contact p {
@@ -284,22 +284,10 @@ footer {
     text-align: left;
 }
 
-/* Form Group */
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    font-size: 16px;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-/* Input Fields */
-input[type="text"],
-input[type="email"],
-textarea {
+/* Form Fields */
+.contact-form-container input[type="text"],
+.contact-form-container input[type="email"],
+.contact-form-container textarea {
     width: 100%;
     padding: 12px;
     font-size: 16px;
@@ -308,19 +296,14 @@ textarea {
     outline: none;
     transition: border-color 0.3s;
     color: #333;
+    margin-bottom: 20px;
 }
 
-/* Input focus effect */
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
+/* Focus Effect */
+.contact-form-container input[type="text"]:focus,
+.contact-form-container input[type="email"]:focus,
+.contact-form-container textarea:focus {
     border-color: #f39c12;
-}
-
-/* Textarea styling */
-textarea {
-    resize: vertical;
-    min-height: 150px;
 }
 
 /* Submit Button */
@@ -342,19 +325,27 @@ textarea {
     background-color: #e67e22;
 }
 
-/* About Section */
-.about {
+/* Services Section */
+.services {
     padding: 60px 20px;
-    background-color: #f4f4f4;
     text-align: center;
+    background-color: #ecf0f1;
 }
 
-.about h1 {
+.services h2 {
     font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.services p {
+    font-size: 18px;
+    color: #777;
     margin-bottom: 40px;
 }
 
-.about-container {
+/* Service Box Container */
+.service-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -362,61 +353,96 @@ textarea {
     margin-top: 20px;
 }
 
-/* About Box */
-.about-box {
+.service-box {
     background-color: white;
-    padding: 30px;
     width: 30%;
+    padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    text-align: center;
     transition: transform 0.3s;
 }
 
-/* Title Inside the Boxes */
-.about-box h2 {
+.service-box h3 {
     font-size: 24px;
     margin-bottom: 15px;
     color: #333;
 }
 
-/* Paragraph Text Inside Boxes */
-.about-box p,
-.about-box ul {
+.service-box p {
     font-size: 16px;
     color: #777;
-    line-height: 1.6;
 }
 
-/* List Items for Our Values */
-.about-box ul {
-    list-style-type: none;
-}
-
-.about-box ul li {
-    margin-bottom: 10px;
-}
-
-/* Hover Effect on Boxes */
-.about-box:hover {
+.service-box:hover {
     transform: scale(1.05);
 }
 
-/* Mobile responsiveness */
+/* FAQ Section */
+.faq {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.faq h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.faq p {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+/* Accordion Styles */
+.accordion-item {
+    background-color: white;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.accordion-item:hover {
+    background-color: #f39c12;
+    color: white;
+}
+
+.accordion-item.active {
+    background-color: #f39c12;
+    color: white;
+}
+
+.accordion-content {
+    display: none;
+    padding-top: 10px;
+    color: #777;
+    font-size: 16px;
+}
+
+.accordion-item.active .accordion-content {
+    display: block;
+}
+
+/* Mobile Responsiveness for Services, FAQ, and Contact */
 @media (max-width: 768px) {
-    .about-container {
+    .service-box,
+    .faq,
+    .contact-form-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .service-container {
         flex-direction: column;
     }
 
-    .about-box {
-        width: 100%;
-    }
-
-    .contact-form-container {
-        padding: 30px;
-        margin: 20px;
-    }
-
+    .faq h2,
     .contact h1 {
         font-size: 32px;
     }
@@ -424,16 +450,9 @@ textarea {
     .contact p {
         font-size: 16px;
     }
-    
-    .box {
-        padding: 20px;
-    }
 
-    h2 {
-        font-size: 28px;
-    }
-
-    .cta-btn {
+    .submit-btn {
         font-size: 16px;
     }
 }
+
