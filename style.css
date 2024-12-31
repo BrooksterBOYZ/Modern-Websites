@@ -19,6 +19,15 @@ body {
     margin: 0 auto;
 }
 
+/* Box for Everything */
+.box {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
 /* Header */
 header {
     background-color: #333;
@@ -57,15 +66,6 @@ nav ul li a:hover {
     color: #f47c4e;  /* Accent color on hover */
 }
 
-/* Section Containers */
-.section-box {
-    background-color: white;
-    border-radius: 20px;
-    padding: 30px;
-    margin: 20px 0;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-}
-
 /* Hero Section */
 .hero {
     background: linear-gradient(45deg, #ff6f61, #ffab00);
@@ -77,8 +77,8 @@ nav ul li a:hover {
     margin: 20px;
 }
 
-.hero .container {
-    width: 100%;
+.hero .box {
+    text-align: center;
 }
 
 .hero h1 {
@@ -114,7 +114,7 @@ nav ul li a:hover {
     padding: 50px 20px;
 }
 
-.feature-box {
+.feature-box .box {
     background-color: #fff;
     padding: 30px;
     border-radius: 20px;
@@ -123,7 +123,7 @@ nav ul li a:hover {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.feature-box:hover {
+.feature-box .box:hover {
     transform: translateY(-10px);
     box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.15);
 }
@@ -148,7 +148,7 @@ nav ul li a:hover {
     text-align: center;
 }
 
-.price-plan {
+.price-plan .box {
     background-color: white;
     padding: 30px;
     border-radius: 20px;
@@ -160,7 +160,7 @@ nav ul li a:hover {
     justify-content: space-between;
 }
 
-.price-plan:hover {
+.price-plan .box:hover {
     transform: translateY(-10px);
     box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.15);
 }
@@ -211,7 +211,7 @@ nav ul li a:hover {
     padding: 50px 20px;
 }
 
-.faq-box {
+.faq-box .box {
     background-color: white;
     padding: 30px;
     border-radius: 20px;
@@ -219,7 +219,7 @@ nav ul li a:hover {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.faq-box:hover {
+.faq-box .box:hover {
     transform: translateY(-10px);
     box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.15);
 }
@@ -236,12 +236,19 @@ nav ul li a:hover {
 }
 
 /* Forms */
+.input-box, .textarea-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
 input[type="text"], textarea {
     width: 100%;
     padding: 15px;
     border-radius: 10px;
     border: 1px solid #ddd;
-    margin-bottom: 20px;
     font-size: 1.2em;
     transition: border-color 0.3s;
 }
@@ -251,13 +258,12 @@ input[type="text"]:focus, textarea:focus {
     outline: none;
 }
 
-/* Email and Message Section Consistency */
-.contact-form input[type="text"], .contact-form textarea {
-    width: 100%;
-    padding: 15px;
-    font-size: 1.2em;
-    border-radius: 10px;
-    border: 1px solid #ddd;
+/* Contact Form */
+.contact-form .box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form button.submit-btn {
@@ -277,7 +283,7 @@ input[type="text"]:focus, textarea:focus {
 }
 
 /* Footer */
-footer {
+footer .box {
     background-color: #333;
     color: white;
     text-align: center;
