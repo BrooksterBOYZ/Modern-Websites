@@ -16,7 +16,6 @@ body {
 header {
     background-color: #333;
     padding: 20px 0;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -35,15 +34,20 @@ nav ul li a {
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
-    padding: 10px 20px;
-    border-radius: 25px;
-    transition: all 0.3s;
-    display: inline-block;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #f47c4e;
-    color: white;
+    color: #f47c4e;  /* Accent color on hover */
+}
+
+/* Section Containers */
+.section-box {
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 20px 0;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* Hero Section */
@@ -54,9 +58,7 @@ nav ul li a:hover {
     padding: 100px 20px;
     border-radius: 20px;
     box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 1000px;
-    width: 80%;
+    margin: 20px;
 }
 
 .hero h1 {
@@ -84,50 +86,37 @@ nav ul li a:hover {
     background-color: #ff6f61;
 }
 
-/* About Section */
-.about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
+/* Features Section */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 50px 20px;
 }
 
-.about .rounded-box {
-    background-color: white;
+.feature-box {
+    background-color: #fff;
+    padding: 30px;
     border-radius: 20px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    margin-bottom: 40px;
-    width: 80%;
-    max-width: 1000px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.about .rounded-box h2 {
+.feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.15);
+}
+
+.feature-box h3 {
     font-size: 2em;
+    color: #333;
     margin-bottom: 20px;
 }
 
-.about .rounded-box p {
+.feature-box p {
     font-size: 1.2em;
-    line-height: 1.6;
-}
-
-.about .cta {
-    text-align: center;
-    padding: 20px;
-    margin-top: 30px;
-}
-
-.about .cta a {
-    background-color: #f47c4e;
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: background-color 0.3s;
-}
-
-.about .cta a:hover {
-    background-color: #ff6f61;
+    color: #555;
 }
 
 /* Pricing Section */
@@ -194,59 +183,36 @@ nav ul li a:hover {
     background-color: #ff6f61;
 }
 
-/* Testimonials Section */
-.testimonials {
-    background-color: white;
+/* FAQ Section */
+.faq-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
     padding: 50px 20px;
-    border-radius: 20px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    width: 80%;
-    max-width: 1000px;
-    text-align: center;
 }
 
-.testimonials h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
+.faq-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.faq-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.15);
+}
+
+.faq-box h3 {
+    font-size: 2em;
+    margin-bottom: 15px;
     color: #333;
 }
 
-.testimonial {
-    background-color: #f9f9f9;
-    padding: 30px;
-    margin: 20px 0;
-    border-radius: 15px;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial p {
-    font-size: 1.2em;
+.faq-box p {
+    font-size: 1.1em;
     color: #555;
-}
-
-.testimonial p:first-child {
-    font-style: italic;
-}
-
-.testimonial p:last-child {
-    font-weight: bold;
-    margin-top: 10px;
-    color: #f47c4e;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
-    margin-top: 40px;
-    box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.1);
-}
-
-footer p {
-    font-size: 1em;
 }
 
 /* Forms */
@@ -265,7 +231,16 @@ input[type="text"]:focus, textarea:focus {
     outline: none;
 }
 
-button.submit-btn {
+/* Email and Message Section Consistency */
+.contact-form input[type="text"], .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.contact-form button.submit-btn {
     background-color: #f47c4e;
     color: white;
     border: none;
@@ -277,138 +252,38 @@ button.submit-btn {
     margin-top: 20px;
 }
 
-button.submit-btn:hover {
+.contact-form button.submit-btn:hover {
     background-color: #ff6f61;
 }
 
-/* Live Chat Box */
-.livechat-toggle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    cursor: pointer;
-    background-color: #f47c4e;
-    border-radius: 50%;
-    padding: 15px;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
-}
-
-.livechat-toggle img {
-    width: 30px;
-    height: 30px;
-}
-
-.livechat-box {
-    display: none;
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-    width: 300px;
-    height: 400px;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd;
-    overflow: hidden;
-}
-
-.livechat-box.active {
-    display: block;
-}
-
-.chat-header {
+/* Footer */
+footer {
     background-color: #333;
     color: white;
-    padding: 15px;
     text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
     font-size: 1.2em;
-    border-radius: 15px 15px 0 0;
+    border-top: 5px solid #f47c4e;
 }
 
-.chat-body {
-    padding: 20px;
+footer p {
     font-size: 1em;
-    height: 230px;
-    overflow-y: auto;
-    background-color: #f9f9f9;
 }
 
-.chat-footer {
-    padding: 10px;
-    background-color: #fff;
-    display: flex;
-    justify-content: space-between;
-}
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+    }
 
-.chat-footer textarea {
-    width: 80%;
-    height: 40px;
-    padding: 5px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-}
+    .pricing {
+        grid-template-columns: 1fr;
+    }
 
-.chat-footer button {
-    width: 15%;
-    background-color: #f47c4e;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.chat-footer button:hover {
-    background-color: #ff6f61;
-}
-
-/* Payment Page Styles */
-.payment {
-    padding: 50px 20px;
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.payment h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.payment form {
-    display: flex;
-    flex-direction: column;
-}
-
-.payment .form-group {
-    margin-bottom: 20px;
-}
-
-.payment label {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-}
-
-.payment input[type="text"] {
-    padding: 15px;
-    font-size: 1.2em;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-}
-
-.payment .submit-btn {
-    padding: 15px 30px;
-    background-color: #f47c4e;
-    color: white;
-    font-size: 1.2em;
-    border-radius: 30px;
-    cursor: pointer;
-    border: none;
-}
-
-.payment .submit-btn:hover {
-    background-color: #ff6f61;
+    .faq-section {
+        grid-template-columns: 1fr;
+    }
 }
