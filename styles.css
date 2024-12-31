@@ -1,28 +1,32 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
+    transition: all 0.3s ease;
 }
 
 /* Header */
 header {
-    background: linear-gradient(90deg, #007bff, #6610f2);
+    background: linear-gradient(90deg, #FF4B2B, #FF416C);
     color: #fff;
-    padding: 15px 20px;
+    padding: 20px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #e5e5e5;
 }
 
 header .logo {
-    font-size: 1.8em;
-    font-weight: bold;
-    letter-spacing: 1px;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
 }
 
 header nav ul {
@@ -33,7 +37,7 @@ header nav ul {
 }
 
 header nav ul li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 header nav ul li a {
@@ -41,11 +45,13 @@ header nav ul li a {
     text-decoration: none;
     padding: 8px 15px;
     border-radius: 5px;
-    transition: background 0.3s, transform 0.3s;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 header nav ul li a:hover {
-    background: #6610f2;
+    background: #FF416C;
     transform: scale(1.05);
 }
 
@@ -54,112 +60,105 @@ header nav ul li a:hover {
     background: url('hero-bg.jpg') no-repeat center center/cover;
     color: #fff;
     text-align: center;
-    padding: 120px 20px;
+    padding: 150px 20px;
     margin-bottom: 40px;
-    border-bottom: 5px solid #6610f2;
+    border-bottom: 5px solid #FF416C;
+    transition: background 0.3s ease;
 }
 
 .hero h1 {
-    font-size: 3em;
-    margin-bottom: 15px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .hero p {
-    font-size: 1.3em;
-    margin-bottom: 20px;
+    font-size: 1.5em;
+    margin-bottom: 30px;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 .cta-button {
-    background: #007bff;
+    background: #FF416C;
     color: #fff;
-    padding: 12px 25px;
+    padding: 15px 30px;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s, transform 0.3s;
-    font-size: 1.1em;
+    border-radius: 50px;
+    font-size: 1.2em;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .cta-button:hover {
-    background: #0056b3;
-    transform: scale(1.05);
+    background: #FF4B2B;
+    transform: scale(1.1);
 }
 
 /* Content Sections */
 main {
-    padding: 20px;
+    padding: 40px 20px;
 }
 
-.section {
-    margin: 40px 0;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-}
-
+/* Section Titles */
 h2, h3 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #007bff;
-    font-weight: 600;
+    font-size: 2.5em;
+    margin-bottom: 25px;
+    color: #FF416C;
+    font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
 }
 
-h3 {
-    font-size: 1.8em;
-}
-
-p, li {
-    font-size: 1.1em;
-    line-height: 1.6;
-    margin-bottom: 15px;
-    background: #f4f4f9;
-    padding: 15px;
-    border-radius: 5px;
-    border: 2px solid #ddd;
-    transition: background 0.3s, border-color 0.3s;
-}
-
-p:hover, li:hover {
-    background: #e2e2e2;
-    border-color: #007bff;
-}
-
-/* Box Layout for Services, Prices, Testimonials */
+/* Service and Pricing Boxes */
 .box-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     justify-content: space-between;
+    margin-bottom: 40px;
 }
 
 .box {
-    flex: 1 1 calc(33.333% - 20px);
+    flex: 1 1 calc(33.333% - 30px);
     background: #fff;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    padding: 25px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid #f2f2f2;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .box:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .box h3 {
-    font-size: 1.5em;
-    color: #007bff;
+    font-size: 1.6em;
+    color: #FF4B2B;
     margin-bottom: 15px;
 }
 
 .box p {
     font-size: 1.1em;
-    line-height: 1.5;
+    line-height: 1.7;
     margin-bottom: 20px;
+    color: #666;
+}
+
+.box button {
+    background: #FF416C;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.box button:hover {
+    background: #FF4B2B;
 }
 
 /* Footer */
@@ -167,35 +166,94 @@ footer {
     background: #333;
     color: #fff;
     text-align: center;
-    padding: 15px 20px;
-    font-size: 1em;
+    padding: 30px 20px;
+    font-size: 1.2em;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin-bottom: 20px;
 }
 
 footer .social-icons {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 footer .social-icons a {
     color: #fff;
-    margin: 0 10px;
+    margin: 0 15px;
     text-decoration: none;
-    font-size: 1.5em;
-    transition: color 0.3s;
+    font-size: 1.8em;
+    transition: color 0.3s ease;
 }
 
 footer .social-icons a:hover {
-    color: #007bff;
+    color: #FF416C;
 }
 
-/* Hover Effects */
-header nav ul li a:hover, .cta-button:hover, .box:hover {
-    transform: scale(1.05);
+/* Testimonials Section */
+.testimonial {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.testimonial strong {
+    font-weight: 700;
+    color: #FF4B2B;
 }
 
 /* Responsive Layout */
+@media (max-width: 1024px) {
+    .box-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.3em;
+    }
+
+    header .logo {
+        font-size: 1.8em;
+    }
+
+    header nav ul li {
+        margin: 0 10px;
+    }
+
+    footer .social-icons a {
+        font-size: 1.5em;
+    }
+}
+
 @media (max-width: 768px) {
     .box-container {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 90%;
+        margin-bottom: 20px;
     }
 
     .hero h1 {
@@ -203,6 +261,7 @@ header nav ul li a:hover, .cta-button:hover, .box:hover {
     }
 
     .hero p {
-        font-size: 1em;
+        font-size: 1.1em;
     }
 }
+
