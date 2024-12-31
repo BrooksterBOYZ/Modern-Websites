@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Websites - Pricing Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Modern Websites</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="prices.html">Prices</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section">
+            <h2>Website Pricing Calculator</h2>
+            <div id="calculator">
+                <label for="pages">Number of Pages</label>
+                <select id="pages">
+                    <option value="1">1</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                </select>
+
+                <label for="features">Additional Features</label>
+                <select id="features">
+                    <option value="0">None</option>
+                    <option value="500">SEO Optimization ($500)</option>
+                    <option value="1000">E-Commerce Integration ($1000)</option>
+                    <option value="1500">Custom Design ($1500)</option>
+                </select>
+
+                <button onclick="calculatePrice()">Calculate Price</button>
+
+                <div class="result" id="result"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Modern Websites. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </footer>
+
+    <script>
+        function calculatePrice() {
+            const pages = parseInt(document.getElementById('pages').value);
+            const features = parseInt(document.getElementById('features').value);
+            const basePrice = pages * 300; // Base price of $300 per page
+            const totalPrice = basePrice + features;
+            document.getElementById('result').textContent = 'Total Price: $' + totalPrice;
+        }
+    </script>
+</body>
+</html>
